@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">shop store</div>
+        <div class="cart">
+            <button onclick="toggleCart()">Cart ( <span id="cart-count">0</span> )</button>
+        </div>
+    </header>
+
+    <div class="products">
+        <div class="product" data-id="1">
+            <img src=https://www.hindustantimes.com/ht-img/img/2023/10/11/550x309/flipkart_women_kurta_pant_set_1697049131293_1697049149765.jpg alt="Product 1">
+            <h3>Product 1</h3>
+            <p>$30.00</p>
+            <button onclick="addToCart(1, 'Product 1', 30)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="2">
+            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStGWJdkj7VfFPzo9-msTtt0xusa5_OwX3j9A&s alt="Product 2">
+            <h3>Product 2</h3>
+            <p>$45.00</p>
+            <button onclick="addToCart(2, 'Product 2', 45)">Add to Cart</button>
+        </div>
+        <div class="product" data-id="3">
+            <img src="https://rukminim2.flixcart.com/image/850/1000/l0h1g280/kitchen-tool-set/d/g/p/spatula-utensil-5pcs-pink-flipkart-smartbuy-original-imagc92vhnx9nzpd.jpeg?q=90&crop=false" alt="Product 3">
+            <h3>Product 3</h3>
+            <p>$10.00</p>
+            <button onclick="addToCart(3, 'Product 3', 10)">Add to Cart</button>
+        </div>
+    </div>
+
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p>Total: $<span id="total-price">0</span></p>
+            <button onclick="checkout()">Checkout</button>
+            <button onclick="toggleCart()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
